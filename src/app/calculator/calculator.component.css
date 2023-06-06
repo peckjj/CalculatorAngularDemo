@@ -1,0 +1,7 @@
+.root {
+    border: 1px solid black;
+    border-radius: 40px;
+    height: 80vh;
+    aspect-ratio: 2/3;
+    margin-top: 5vh;
+}
