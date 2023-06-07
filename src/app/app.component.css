@@ -24,3 +24,13 @@ app-pokemon-sprite {
 .hidden {
     display: none;
 }
+
+app-guess-pokemon {
+  border: 5px solid black;
+  /* box-sizing: border-box; */
+  position: fixed;
+  right: 0;
+  top: 20%;
+  height: 40vh;
+  aspect-ratio: 1;
+}

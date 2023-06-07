@@ -7,7 +7,7 @@ import { ReplaySubject } from 'rxjs';
 })
 export class PokemonService {
 
-  $image: ReplaySubject<string> = new ReplaySubject(1);
+  $image: ReplaySubject<{url: string, name: string}> = new ReplaySubject(1);
 
   constructor(private http: HttpClient) {
     this.getNewImage();
@@ -16,9 +16,21 @@ export class PokemonService {
   async getNewImage() {
     let pokemon = this.allPokemon[Math.floor(Math.random()*this.allPokemon.length)].toLowerCase();
 
-    let source = (await this.http.get<any>('https://pokeapi.co/api/v2/pokemon/' + pokemon).toPromise()).sprites.front_default;
+    let source;
 
-    this.$image.next(source);
+    try {
+      source = (await this.http.get<any>('https://pokeapi.co/api/v2/pokemon/' + pokemon, {observe: 'response'}).toPromise());
+    } catch (err) {
+      while (source?.status == 404 || !source?.body.sprites.front_default) {
+        pokemon = this.allPokemon[Math.floor(Math.random()*this.allPokemon.length)].toLowerCase();
+        try {
+          source = (await this.http.get<any>('https://pokeapi.co/api/v2/pokemon/' + pokemon, {observe: 'response'}).toPromise());
+        } catch (err) {}
+      }
+    }
+
+
+    this.$image.next({url: source?.body.sprites.front_default, name: pokemon});
   }
 
   private allPokemon = [

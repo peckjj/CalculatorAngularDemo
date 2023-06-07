@@ -1,0 +1,8 @@
+<div class="root">
+  <img [src]="source" id="image">
+  <strong>{{statusText}}</strong>
+  <div class="input">
+    <input type="text" [(ngModel)]="guess">
+    <button (click)="check()" id="enter">Enter</button>
+  </div>
+</div>

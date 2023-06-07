@@ -17,7 +17,7 @@ export class PokemonSpriteComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.pokemonServiceSub = this.pokemonService.$image.subscribe((source) => {
-      this.source = source;
+      this.source = source.url;
     });
   }
 

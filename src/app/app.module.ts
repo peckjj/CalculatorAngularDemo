@@ -13,6 +13,7 @@ import { CalcDecorComponent } from './calculator/calc-decor/calc-decor.component
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonSpriteComponent } from './pokemon-sprite/pokemon-sprite.component';
+import { GuessPokemonComponent } from './guess-pokemon/guess-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PokemonSpriteComponent } from './pokemon-sprite/pokemon-sprite.componen
     CalcKeypadComponent,
     CalcButtonComponent,
     CalcDecorComponent,
-    PokemonSpriteComponent
+    PokemonSpriteComponent,
+    GuessPokemonComponent
   ],
   imports: [
     BrowserModule,

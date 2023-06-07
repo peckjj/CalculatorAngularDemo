@@ -130,6 +130,5 @@ export class CalculatorService {
     this.rValue = '0';
 
     this.updateDisplay();
-    this.pokemonService.getNewImage();
   }
 }
