@@ -21,6 +21,10 @@ app-calc-button {
     flex: 1
 }
 
+app-calc-button:hover {
+    cursor: pointer;
+}
+
 #equals-button {
     flex: 2;
 }
