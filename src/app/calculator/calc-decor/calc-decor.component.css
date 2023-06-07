@@ -1,0 +1,30 @@
+.root {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    height: 100%;
+    margin: 5px;
+}
+
+.solar-panel {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    border: 4px inset black;
+    height: 70%;
+    width: 35%;
+}
+
+.panel {
+    box-sizing: border-box;
+    flex-grow: 1;
+    height: 100%;
+    background-image: linear-gradient(135deg, green, black 143%);
+    border: 2px solid black;
+}
+
+.logo {
+    font-size: 4vh;
+}

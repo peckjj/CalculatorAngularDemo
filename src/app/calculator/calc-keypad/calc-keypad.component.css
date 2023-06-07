@@ -1,0 +1,26 @@
+.root {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    width: 100%;
+}
+
+app-calc-button {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px;
+    flex: 1
+}
+
+#equals-button {
+    flex: 2;
+}

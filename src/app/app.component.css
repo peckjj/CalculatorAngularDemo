@@ -12,3 +12,15 @@
     width: 15%;
     height: 70%;
 }
+
+app-pokemon-sprite {
+    position: fixed;
+    height: 40vh;
+    left: 15%;
+    right: auto;
+    top: 30vh;
+}
+
+.hidden {
+    display: none;
+}

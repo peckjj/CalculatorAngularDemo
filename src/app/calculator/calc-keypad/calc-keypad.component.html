@@ -1,0 +1,31 @@
+<div class="root">
+    <div class="row">
+        <app-calc-button val="7"></app-calc-button>
+        <app-calc-button val="8"></app-calc-button>
+        <app-calc-button val="9"></app-calc-button>
+        <app-calc-button val="/" [bgColor]="opButtonBgColor" [textColor]="opButtonTextColor"></app-calc-button>
+    </div>
+    <div class="row">
+        <app-calc-button val="4"></app-calc-button>
+        <app-calc-button val="5"></app-calc-button>
+        <app-calc-button val="6"></app-calc-button>
+        <app-calc-button val="*" [bgColor]="opButtonBgColor" [textColor]="opButtonTextColor"></app-calc-button>
+    </div>
+    <div class="row">
+        <app-calc-button val="1"></app-calc-button>
+        <app-calc-button val="2"></app-calc-button>
+        <app-calc-button val="3"></app-calc-button>
+        <app-calc-button val="+" [bgColor]="opButtonBgColor" [textColor]="opButtonTextColor"></app-calc-button>
+    </div>
+    <div class="row">
+        <app-calc-button val="+/-" [bgColor]="specialButtonBgColor" [textColor]="specialButtonTextColor"></app-calc-button>
+        <app-calc-button val="0"></app-calc-button>
+        <app-calc-button val="." [bgColor]="specialButtonBgColor" [textColor]="specialButtonTextColor"></app-calc-button>
+        <app-calc-button val="-" [bgColor]="opButtonBgColor" [textColor]="opButtonTextColor"></app-calc-button>
+    </div>
+    <div class="row">
+        <app-calc-button val="C" [bgColor]="'white'" [textColor]="specialButtonTextColor"></app-calc-button>
+        <app-calc-button val="<<" [bgColor]="specialButtonBgColor" [textColor]="specialButtonTextColor"></app-calc-button>
+        <app-calc-button val="=" [bgColor]="'white'" [textColor]="specialButtonTextColor" id="equals-button"></app-calc-button>
+    </div>
+</div>

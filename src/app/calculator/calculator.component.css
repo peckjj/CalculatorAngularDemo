@@ -1,7 +1,36 @@
 .root {
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid black;
     border-radius: 40px;
     height: 80vh;
     aspect-ratio: 2/3;
     margin-top: 5vh;
+    padding: 10px;
+    background-color: cornflowerblue;
+    box-shadow: 20px 15px 15px;
+}
+
+app-calc-display {
+    flex-grow: 2;
+    width: 100%;
+}
+
+app-calc-keypad {
+    box-sizing: border-box;
+    border: 3px inset black;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    flex-grow: 7;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(53, 53, 53);
+}
+
+app-calc-decor {
+    flex-grow: 1;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
